@@ -6,23 +6,23 @@ This repo is a compilation of work done to explore possible features for improvi
 
 ### Project Goals
 
-The goal of this project is to gain insight on how to improve models that predict the Zestimates of Single Family Properties that had a transaciton in 2017.
+The goal of this project is to understand the drivers of error in Zillow's Zestimates for single family homes sold in 2017.
 
 ### Project Description
 
-Providing acurrate data to our customer base is of upmost importance. Here at Zillow we pride ourselves in consistant improvement. Imporving our predictive models can help us keep an edge in this highly competitive online space. In this project I will explore what features we can use to improve our current models to predict tax assessed values of Single Family Properties that had a transaction in 2017.
+Here at Zillow we pride ourselves in providing acurrate data to our customer base. To keep an edge in this highly competitive online space, we must strive for consistant improvement. In this project I will explore what features we can use to improve our current models that predict Zestimate scores of Single Family Properties that had a transaction in 2017 by understanding the drivers of logerror.
 
 ### Initial Questions
 
-1) 
+1) Is Logerror affected by Location?
 
-2) 
+2) Is Logerror affected by the house attributes?
 
-3) 
+3) Is Logerror affected by the age of the property?
 
-4) 
+4) Is logerror affected by the time of year it is sold?
 
-5) 
+5) Is logerror affected by the tax values?
 
 ### Summary of Findings
 
@@ -31,22 +31,28 @@ Providing acurrate data to our customer base is of upmost importance. Here at Zi
 
 ### Project Report
 
-
+https://github.com/mwboiss/clustering-project/blob/main/report.ipynb
 
 ### Data Dictionary
 
 Variable | Meaning |
 :-: | :-- |
-'bathrooms'|Number of bathrooms in home including fractional bathrooms
-'bedrooms'|Number of bedrooms in home 
-'bed_to_bath_ratio'|Bedrooms divided by Bathrooms
-'area'|Calculated total finished living area of the home 
-'county'|county where home was sold
-'parcelid'|Unique identifier for parcels (lots) 
-'propertylandusetypeid'|Type of land use the property is zoned for
-'yearbuilt'|The Year the principal residence was built 
-'taxvaluedollarcnt'|The total tax assessed value of the parcel
-'taxable_value'|The total tax assessed value of the parcel
+Feature	Description
+'bathrooms'	| Number of bathrooms in home including fractional bathrooms
+'bedrooms'	| Number of bedrooms in home 
+'area'	| Calculated total finished living area of the home 
+'latitude'	| Latitude of the middle of the parcel multiplied by 10e6
+'longitude'	| Longitude of the middle of the parcel multiplied by 10e6
+'lot_size'	| Area of the lot in square feet
+'parcelid'	| Unique identifier for parcels (lots) 
+'city'	| City in which the property is located (if any)
+'zip'	| Zip code in which the property is located
+'yearbuilt'	| The Year the principal residence was built 
+'taxable_value'	| The total tax assessed value of the parcel
+'taxamount'	| The total property tax assessed for that assessment year
+'month_sold' | The month the property was sold
+'age' | The age of the property
+'long_use' |  Type of land use the property is zoned for
 
 ### Steps to Reproduce
 
@@ -112,15 +118,15 @@ Variable | Meaning |
 
 ###### Questions to Answer
 
-1) 
+1) Is Logerror affected by Location?
 
-2) 
+2) Is Logerror affected by the house attributes?
 
-3) 
+3) Is Logerror affected by the age of the property?
 
-4) 
+4) Is logerror affected by the time of year it is sold?
 
-5) 
+5) Is logerror affected by the tax values?
 
 ###### Explore through visualizations
 
